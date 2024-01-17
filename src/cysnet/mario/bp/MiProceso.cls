@@ -9,7 +9,7 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 <sequence xend='200' yend='600' >
 <if name='ID &gt; 0' condition='request.idPersona &gt; 0' xpos='200' ypos='250' xend='200' yend='500' >
 <true>
-<call name=' Obtener Persona' target='DBCache' async='0' xpos='335' ypos='400' >
+<call name=' Obtener Persona' target='DBCache' async='0' xpos='470' ypos='400' >
 <request type='cysnet.mario.msg.ObtenerPersonaRequest' >
 <assign property="callrequest" value="request" action="set" />
 </request>
@@ -18,6 +18,9 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 </response>
 </call>
 </true>
+<false>
+<assign name="asingar error" property="response.mensaje" value="&quot;Este es el mensaje de error&quot;" action="set" xpos='200' ypos='400' />
+</false>
 </if>
 </sequence>
 </process>
