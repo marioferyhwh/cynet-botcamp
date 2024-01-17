@@ -5,6 +5,10 @@ Property nombre As %String;
 
 Property apellidos As %String;
 
+Property direccion As %String;
+
+Property codPostal As %Integer;
+
 Storage Default
 {
 <Data name="PersonaDefaultData">
@@ -16,6 +20,12 @@ Storage Default
 </Value>
 <Value name="3">
 <Value>apellidos</Value>
+</Value>
+<Value name="4">
+<Value>direccion</Value>
+</Value>
+<Value name="5">
+<Value>codPostal</Value>
 </Value>
 </Data>
 <DataLocation>^cysnet.mario.data.PersonaD</DataLocation>

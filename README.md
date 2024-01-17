@@ -91,6 +91,10 @@ INSERT INTO cysnet_mario_data.Persona (nombre, apellidos) VALUES ('Persona1','de
 INSERT INTO cysnet_mario_data.Persona (nombre, apellidos) VALUES ('Persona2','de Prueba')
 INSERT INTO cysnet_mario_data.Persona (nombre, apellidos) VALUES ('Persona3','de Prueba')
 INSERT INTO cysnet_mario_data.Persona (nombre, apellidos) VALUES ('Persona4','de Prueba')
+INSERT INTO cysnet_mario_data.Persona (nombre, apellidos, direccion, codPostal) VALUES ('Persona5','de Prueba','address5',5)
+INSERT INTO cysnet_mario_data.Persona (nombre, apellidos, direccion, codPostal) VALUES ('Persona6','de Prueba','address6',6)
+INSERT INTO cysnet_mario_data.Persona (nombre, apellidos, direccion, codPostal) VALUES ('Persona7','de Prueba','address7',7)
+INSERT INTO cysnet_mario_data.Persona (nombre, apellidos, direccion, codPostal) VALUES ('Persona8','de Prueba','address8',8)
 
 ```
 
@@ -98,3 +102,11 @@ Stop production in terminal
 ```
 ##class(Ens.Director).StopProduction(,1)
 ```
+
+
+conection DBeaver
+host:localhost
+port:1972
+
+user:_SYSTEM
+password:(clave) o otra si se cambio

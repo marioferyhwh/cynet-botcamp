@@ -7,13 +7,15 @@ Method obtenerPersona(pRequest As cysnet.mario.msg.ObtenerPersonaRequest, Output
     set pResponse = ##class(cysnet.mario.msg.ObtenerPersonaResponse).%New()
 
     set stm = ##class(%SQL.Statement).%New()
-    do stm.%Prepare("SELECT nombre, apellidos FROM cysnet_mario_data.Persona WHERE ID = "_pRequest.idPersona)
+    do stm.%Prepare("SELECT nombre, apellidos, direccion, codPostal FROM cysnet_mario_data.Persona WHERE ID = "_pRequest.idPersona)
 
     set rs = stm.%Execute()
 
     if (rs.%Next()) {
         set pResponse.nombre = rs.nombre
         set pResponse.apellidos = rs.apellidos
+        set pResponse.direccion = rs.direccion
+        set pResponse.codPostal = rs.codPostal
     }
     
     quit $$$OK
