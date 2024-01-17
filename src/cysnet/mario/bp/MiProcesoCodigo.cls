@@ -6,6 +6,8 @@ Method OnRequest(pRequest As cysnet.mario.msg.ObtenerPersonaRequest, Output pRes
   Set pResponse = ##class(cysnet.mario.msg.ObtenerPersonaResponse).%New()
   If (pRequest.idPersona > 0) {
     Do ..SendRequestSync("DBCache", pRequest, .pResponse)
+  }Else{
+    Set pResponse.mensaje = "Este es el mensaje de error-"
   }
   Quit $$$OK
 }
