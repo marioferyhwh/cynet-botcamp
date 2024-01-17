@@ -93,3 +93,8 @@ INSERT INTO cysnet_mario_data.Persona (nombre, apellidos) VALUES ('Persona3','de
 INSERT INTO cysnet_mario_data.Persona (nombre, apellidos) VALUES ('Persona4','de Prueba')
 
 ```
+
+Stop production in terminal
+```
+##class(Ens.Director).StopProduction(,1)
+```
