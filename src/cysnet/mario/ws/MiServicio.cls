@@ -16,4 +16,17 @@ Method saludo(nombre As %String) As %String [ WebMethod ]
 	Quit "Hola "_nombre_" !"
 }
 
+Method obtenerPersona(idPer As %Integer) As cysnet.mario.msg.ObtenerPersonaResponse [ WebMethod ]
+{
+	#dim req As cysnet.mario.msg.ObtenerPersonaRequest
+	#dim rsp As cysnet.mario.msg.ObtenerPersonaResponse
+	
+	set req = ##class(cysnet.mario.msg.ObtenerPersonaRequest).%New()
+	set req.idPersona = idPer
+	
+	do ..SendRequestSync("DBCache", req, .rsp)
+	
+	quit rsp
+}
+
 }
