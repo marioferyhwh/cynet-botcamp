@@ -82,12 +82,14 @@ http://localhost:52773/csp/healthshare/mario/cysnet.mario.ws.MiServicio.cls?WSDL
 # DATABASE
 
 ```sql
-SELECT * FROM cysnet_mario_data.Personas
+SELECT * FROM cysnet_mario_data.Persona
 ```
 
 ```sql
-INSERT INTO cysnet_mario_data.Personas (nombre, apellido,edad,direccion,codPostal) VALUES ('Persona1','de Prueba',18,'calle 18',12341)
-INSERT INTO cysnet_mario_data.Personas (nombre, apellido,edad,direccion,codPostal) VALUES ('Persona2','de Prueba',19,'calle 19',12342)
-INSERT INTO cysnet_mario_data.Personas (nombre, apellido,edad,direccion,codPostal) VALUES ('Persona3','de Prueba',20,'calle 20',12343)
-INSERT INTO cysnet_mario_data.Personas (nombre, apellido,edad,direccion,codPostal) VALUES ('Persona4','de Prueba',21,'calle 21',12344)
+
+INSERT INTO cysnet_mario_data.Persona (nombre, apellidos) VALUES ('Persona1','de Prueba')
+INSERT INTO cysnet_mario_data.Persona (nombre, apellidos) VALUES ('Persona2','de Prueba')
+INSERT INTO cysnet_mario_data.Persona (nombre, apellidos) VALUES ('Persona3','de Prueba')
+INSERT INTO cysnet_mario_data.Persona (nombre, apellidos) VALUES ('Persona4','de Prueba')
+
 ```
