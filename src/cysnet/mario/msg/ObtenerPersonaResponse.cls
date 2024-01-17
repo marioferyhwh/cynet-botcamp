@@ -9,6 +9,8 @@ Property direccion As %String;
 
 Property codPostal As %Integer;
 
+Property mensaje As %String(MAXLEN = 255);
+
 Storage Default
 {
 <Data name="ObtenerPersonaResponseDefaultData">
@@ -24,6 +26,9 @@ Storage Default
 </Value>
 <Value name="4">
 <Value>codPostal</Value>
+</Value>
+<Value name="5">
+<Value>mensaje</Value>
 </Value>
 </Data>
 <DefaultData>ObtenerPersonaResponseDefaultData</DefaultData>
