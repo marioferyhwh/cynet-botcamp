@@ -1,0 +1,46 @@
+version: '3.6'
+services:
+  mysql:
+    image: mysql:latest
+    hostname: conference-mysql
+    container_name: conference-mysql
+    restart: always
+    ports:
+      - '3306:3306'
+    command: 
+      - --default-authentication-plugin=mysql_native_password
+    expose:
+      - '3306'
+    volumes:
+      - type: bind
+        source: ./mysql-shared
+        target: /var/lib/mysql
+    environment:
+      MYSQL_DATABASE: 'iris'
+      MYSQL_USER: 'iris'
+      MYSQL_PASSWORD: 'iris'
+      MYSQL_ROOT_PASSWORD: 'iris'
+  iris:
+    #image: containers.intersystems.com/intersystems/irishealth-community-arm64:latest-cd
+    image: containers.intersystems.com/intersystems/irishealth-community:latest-cd
+    #image: intersystemsdc/irishealth-community
+    #image: intersystemsdc/irishealth-ml-community
+    hostname: conference-katas-iris
+    container_name: conference-katas-iris
+    ports:
+      - 52773:52773
+      - 1972:1972
+      - 1980:1980
+      - 1981:1981
+      - 1982:1982
+      - 1983:1983
+      - 1984:1984
+    command:
+      - --check-caps false
+      - --password-file /shared/pass.txt
+    volumes:
+      - type: bind
+        source: ./iris-shared
+        target: /shared
+    environment:
+      - ISC_DATA_DIRECTORY=/shared/iris

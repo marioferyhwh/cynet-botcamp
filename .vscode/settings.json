@@ -1,0 +1,22 @@
+{
+  "intersystems.servers": {
+    "local-mario": {
+      "webServer": {
+        "scheme": "http",
+        "host": "localhost",
+        "port": 52773
+      },
+      "username": "_SYSTEM"
+    }
+  },
+  "objectscript.conn": {
+    "server": "local-mario",
+    "ns": "MARIO",
+    "active": true,
+    "links": {
+      "$(terminal) WebTerminal": "${serverUrl}/terminal/?ns=${ns}${serverAuth}",
+      "SOAP Wizard": "${serverUrl}/isc/studio/templates/%25ZEN.Template.AddInWizard.SOAPWizard.cls?Namespace=${namespace}${serverAuth}"
+    }
+  },
+  "explorer.compactFolders": false
+}
