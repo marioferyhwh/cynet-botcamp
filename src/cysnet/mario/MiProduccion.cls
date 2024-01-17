@@ -10,6 +10,8 @@ XData ProductionDefinition
   </Item>
   <Item Name="DBCache" Category="" ClassName="cysnet.mario.bo.DBCache" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
+  <Item Name="MiProceso" Category="" ClassName="cysnet.mario.bp.MiProceso" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  </Item>
 </Production>
 }
 
