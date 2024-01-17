@@ -10,10 +10,10 @@ Parameter NAMESPACE = "http://tempuri.org";
 /// Se utilizarán namespaces de clases referenciadas en WSDL.
 Parameter USECLASSNAMESPACES = 1;
 
-Method saludo() As %String [ WebMethod ]
+Method saludo(nombre As %String) As %String [ WebMethod ]
 {
   $$$LOGINFO("Method SALUDO----")
-	Quit "Hola Mundo!"
+	Quit "Hola "_nombre_" !"
 }
 
 }
