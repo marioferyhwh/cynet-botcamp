@@ -12,6 +12,7 @@ Parameter USECLASSNAMESPACES = 1;
 
 Method saludo() As %String [ WebMethod ]
 {
+  $$$LOGINFO("Method SALUDO----")
 	Quit "Hola Mundo!"
 }
 
